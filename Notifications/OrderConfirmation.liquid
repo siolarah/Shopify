@@ -2,6 +2,9 @@
 {% capture email_body %}
   {% if requires_shipping %}
     Hi {{ customer.first_name }},<br> Thanks for choosing Serialio -- we really appreciate it. Your order summary is below, along with a link to track the status. We are currently processing your order. <br><br>
+
+<p><a target='_blank' href='https://buy.serialio.com/apps/download-pdf/ca6530d0de806c790400/{{ id | times: 5416 }}/{{ order_number | default: number }}.pdf'>Click here to download your PDF invoice</a></p>
+<br><br>
 <b>When Will My Order Ship?</b><br>
 <ul>
 <li>Orders typically ship within one (1) business day.</li>
@@ -424,4 +427,3 @@ Thanks again!
     </table>
   </body>
 </html>
-
